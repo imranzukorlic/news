@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Nav } from "./Components/Nav/Nav";
+import Nav from "./Components/Nav/Nav";
 import "./App.css";
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
   }, [page, what]);
   return (
     <div className="App">
+      <Nav news={news} />
       <div className="prvi">
         <button onClick={() => setWhat("bitcoin")}>bitcoin</button>
         <button onClick={() => setWhat("apple")}>aple</button>
@@ -57,7 +58,6 @@ function App() {
         <button onClick={() => setPage((prev) => prev + 1)}>+</button>
       </div>
       <h1>nice</h1>
-      <Nav />
     </div>
   );
 }
