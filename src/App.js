@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
-import Nav from "./Components/Nav/Nav";
+// import Nav from "./Components/Nav/Nav";
+import { Box, HStack } from "@chakra-ui/react";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import "./App.css";
 
 function App() {
@@ -33,15 +35,112 @@ function App() {
   }, [page, what]);
   return (
     <div className="App">
-      <Nav news={news} />
+      <Tabs variant="enclosed">
+        <TabList mb="1em">
+          <Tab onClick={() => setWhat("bitcoin")}>Bitcoin</Tab>
+          <Tab onClick={() => setWhat("apple")}>Apple</Tab>
+          <Tab onClick={() => setWhat("tesla")}>Tesla</Tab>
+          <Tab onClick={() => setWhat("sport")}>Sport</Tab>
+        </TabList>
+        <TabPanels>
+          <TabPanel>
+            {!loading ? (
+              <div>
+                {news.map((nw, id) => (
+                  <div>
+                    <img
+                      src={nw.urlToImage}
+                      alt="slika"
+                      width="150px"
+                      height="150px"
+                    ></img>
+                    <h2>{nw.description}</h2>
+                    <h4>{nw.author}</h4>
+                    <p>{nw.content}</p>
+                    <a href={nw.url}>{nw.title}</a>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>Loading...</p>
+            )}
+          </TabPanel>
+          <TabPanel>
+            {!loading ? (
+              <div>
+                {news.map((nw, id) => (
+                  <div>
+                    <img
+                      src={nw.urlToImage}
+                      alt="slika"
+                      width="150px"
+                      height="150px"
+                    ></img>
+                    <h2>{nw.description}</h2>
+                    <h4>{nw.author}</h4>
+                    <p>{nw.content}</p>
+                    <a href={nw.url}>{nw.title}</a>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>Loading...</p>
+            )}
+          </TabPanel>
+          <TabPanel>
+            {!loading ? (
+              <div>
+                {news.map((nw, id) => (
+                  <div>
+                    <img
+                      src={nw.urlToImage}
+                      alt="slika"
+                      width="150px"
+                      height="150px"
+                    ></img>
+                    <h2>{nw.description}</h2>
+                    <h4>{nw.author}</h4>
+                    <p>{nw.content}</p>
+                    <a href={nw.url}>{nw.title}</a>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>Loading...</p>
+            )}
+          </TabPanel>
+          <TabPanel>
+            {!loading ? (
+              <div>
+                {news.map((nw, id) => (
+                  <div>
+                    <img
+                      src={nw.urlToImage}
+                      alt="slika"
+                      width="150px"
+                      height="150px"
+                    ></img>
+                    <h2>{nw.description}</h2>
+                    <h4>{nw.author}</h4>
+                    <p>{nw.content}</p>
+                    <a href={nw.url}>{nw.title}</a>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>Loading...</p>
+            )}
+          </TabPanel>
+        </TabPanels>
+      </Tabs>
       <div className="prvi">
-        <button onClick={() => setWhat("bitcoin")}>bitcoin</button>
+        {/* <button onClick={() => setWhat("bitcoin")}>bitcoin</button>
         <button onClick={() => setWhat("apple")}>aple</button>
         <button onClick={() => setWhat("tesla")}>tesla</button>
-        <button onClick={() => setWhat("sport")}>sport</button>
+        <button onClick={() => setWhat("sport")}>sport</button> */}
       </div>
       <div className="drugi">
-        {!loading ? (
+        {/* {!loading ? (
           <div>
             {news.map((nw, id) => (
               <div key={id}>
@@ -51,13 +150,13 @@ function App() {
           </div>
         ) : (
           <p>Loading...</p>
-        )}
+        )} */}
       </div>
       <div className="treci">
         <button onClick={() => setPage((prev) => prev - 1)}>-</button>
+        <span>pagination</span>
         <button onClick={() => setPage((prev) => prev + 1)}>+</button>
       </div>
-      <h1>nice</h1>
     </div>
   );
 }

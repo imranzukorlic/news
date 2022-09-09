@@ -5,15 +5,23 @@ const Nav = () => {
   return (
     <Tabs isFitted variant="enclosed">
       <TabList mb="1em">
-        <Tab>One</Tab>
-        <Tab>Two</Tab>
+        <Tab>Bitcoin</Tab>
+        <Tab>Apple</Tab>
+        <Tab>Tesla</Tab>
+        <Tab>Sport</Tab>
       </TabList>
       <TabPanels>
         <TabPanel>
-          <p>one!</p>
+          <p>Bitcoin</p>
         </TabPanel>
         <TabPanel>
-          <p>two!</p>
+          <p>Apple</p>
+        </TabPanel>
+        <TabPanel>
+          <p>Tesla</p>
+        </TabPanel>
+        <TabPanel>
+          <p>Sport</p>
         </TabPanel>
       </TabPanels>
     </Tabs>
