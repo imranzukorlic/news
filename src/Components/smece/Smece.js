@@ -232,3 +232,45 @@
 //   );
 // };
 // export default App;
+// import React, { useState } from "react";
+// import "./App.css";
+// import Header from "./Components/Nav/Nav";
+// // import { Grid } from "@nextui-org/react";
+// // import Card5 from "./Components/Container/Container";
+// // import Paginate from "./Components/Pagination/Pagination";
+// import Tesla from "./Components/Axios/Tesla";
+// import BusinessHeadlines from "./Components/Axios/BuisnissHedaline";
+// import TechCrunch from "./Components/Axios/TechCrunch";
+// import WallStreet from "./Components/Axios/WallStreet";
+
+// const App = () => {
+//   const [show, setShow] = useState("");
+//   const handleTesla = () => {
+//     setShow("tesla");
+//   };
+//   const handleBusinessHeadlines = () => {
+//     setShow("headlines");
+//   };
+//   const handleTechCrunch = () => {
+//     setShow("crunch");
+//   };
+//   const handleWallStreet = () => {
+//     setShow("wallstreet");
+//   };
+//   return (
+//     <>
+//       <Header
+//         showTesla={handleTesla}
+//         showBusinessHeadlines={handleBusinessHeadlines}
+//         showTechCrunch={handleTechCrunch}
+//         showWallStreet={handleWallStreet}
+//       />
+//       {show === "tesla" && <Tesla />}
+//       {show === "headlines" && <BusinessHeadlines />}
+//       {show === "crunch" && <TechCrunch />}
+//       {show === "wallstreet" && <WallStreet />}
+//     </>
+//   );
+// };
+
+// export default App;
