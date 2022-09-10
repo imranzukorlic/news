@@ -1,15 +1,8 @@
-import * as React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import "./App.css";
+import React from "react";
+// import Nav from "./Components/Nav/Nav";
+
 const App = () => {
-  return (
-    <div className="App">
-      <h1>NAV</h1>
-      <Routes>
-        <Route path="/" element={<h1>home page</h1>} />
-        <Route path="about" element={<p>about</p>} />
-      </Routes>
-    </div>
-  );
+  return <div></div>;
 };
+
 export default App;
