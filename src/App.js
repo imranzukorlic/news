@@ -5,6 +5,8 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import { Routes, Route, NavLink } from "react-router-dom"; //link
 import HomePage from "./Page/HomePage/HomePage";
 import TeamPage from "./Page/TeamPage/TeamPage";
+import { useLocation } from "react-router-dom";
+
 export default function App() {
   let activeStyle = {
     textDecoration: "underline",
@@ -12,6 +14,8 @@ export default function App() {
   };
 
   let activeClassName = "underline";
+  const location = useLocation();
+  console.log(location);
 
   return (
     <div className="card-container">

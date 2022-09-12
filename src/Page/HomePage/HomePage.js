@@ -14,12 +14,22 @@ import { useNavigate } from "react-router-dom";
 // ];
 
 export default function HomePage() {
+  const [name] = React.useState("Johin");
   const navigate = useNavigate();
 
   return (
     <Box sx={{ width: "100%" }}>
       HOME
-      <Button variant="contained" onClick={() => navigate("/team")}>
+      <Button
+        variant="contained"
+        onClick={() =>
+          navigate("/team", {
+            state: {
+              name,
+            },
+          })
+        }
+      >
         Go to Team
       </Button>
     </Box>
